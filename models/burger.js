@@ -11,6 +11,8 @@ const burger = {
     },
     updateOne() {
         orm.updateOne()
-        
+
     }
 }
+
+module.exports = burger;
