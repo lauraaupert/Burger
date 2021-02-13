@@ -1,12 +1,35 @@
 <h1>Welcome to the Burger Devouring Factory</h1>
 
-
-
 <ul>
-  {{#each burgers}}
-  {{/each}}
+  {{#each burger}}
+<li>
+	{{burger_name}}
+    </li>
+    {{/each}}
+
 </ul>
 
+
+{{!-- <ul>
+  {{#each burgers}}
+  {{!-- {{#unless sleepy}} --}}
+  {{!-- {{> burgers/burger-block devoured=false}}
+  {{!-- {{/unless}} --}}
+  {{!-- {{/each}}
+</ul>  --}}
+{{!-- <ul>
+  {{#each burgers}}
+  <li>
+	{{burger_name}}
+
+	{{!-- <button class="change-sleep" data-id="{{id}}" data-newsleep="{{sleep}}">
+		{{#if sleep}}SLEEP TIME!{{else}}WAKE UP!{{/if}}
+	</button>
+
+	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button> --}}
+</li>
+  {{!-- {{/each}} --}}
+{{!-- </ul>--}} 
 
 
 
