@@ -2,11 +2,19 @@
 
 <ul>
   {{#each burger}}
-<li>
-	{{burger_name}}
-    </li>
-    {{/each}}
+  {{#unless devoured}}
+  {{> burger-block devoured=false}}
+  {{/unless}}
+  {{/each}}
 
+</ul>
+
+<ul>
+  {{#each burger}}
+  {{#if devoured}}
+  {{> burger-block devoured=true}}
+  {{/if}}
+  {{/each}}
 </ul>
 
 
