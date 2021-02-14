@@ -1,3 +1,6 @@
+body {
+    text-align: center;
+}
 .laterburger {
     width: 50%;
     background-color: yellow;
@@ -12,4 +15,9 @@
 
 .burgerform {
     float: none;
+    margin-top: 200px;
+}
+
+.burgerimage {
+    width: 50%
 }
