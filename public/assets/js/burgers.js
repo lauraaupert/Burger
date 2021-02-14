@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if (changeDevouredBtns) {
       changeDevouredBtns.forEach((button) => {
         button.addEventListener('click', (e) => {
+          e.preventDefault();
           const id = e.target.getAttribute('data-id');
           const newDevour = e.target.getAttribute('data-new');
   
@@ -63,6 +64,7 @@ const deleteBurger = document.querySelectorAll('.delete-burger');
 
   deleteBurger.forEach((button) => {
     button.addEventListener('click', (e) => {
+      e.preventDefault();
       const id = e.target.getAttribute('data-id');
 
       fetch(`/api/burgers/${id}`, {
