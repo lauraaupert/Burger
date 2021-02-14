@@ -1,10 +1,10 @@
 INSERT INTO burgers (burger_name) VALUES ('Cheeseburger');
-INSERT INTO burgers (burger_name, devoured) VALUES ('Hamburger', 'true');
+INSERT INTO burgers (burger_name, devoured) VALUES ('Hamburger', true);
 INSERT INTO burgers (burger_name) VALUES ('Vegan Burger');
 
-INSERT INTO burgers (burger_name) VALUES ('Cheeseburger');
-INSERT INTO burgers (burger_name) VALUES ('Hamburger');
-INSERT INTO burgers (burger_name) VALUES ('Vegan Burger');
+INSERT INTO burgers (burger_name, devoured) VALUES ('Cheeseburger', true);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Hamburger', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Vegan Burger', true);
 INSERT INTO burgers (burger_name) VALUES ('Hello');
 
 DROP DATABASE IF EXISTS burgers_db;
@@ -15,7 +15,7 @@ USE burgers_db;
 CREATE TABLE burgers (
   id INTEGER AUTO_INCREMENT NOT NULL,
   burger_name VARCHAR(30),
-  devoured BOOLEAN DEFAULT false,
+  devoured BOOLEAN,
   PRIMARY KEY (id)
 );
 

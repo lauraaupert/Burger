@@ -16,8 +16,27 @@ body {
 .burgerform {
     float: none;
     margin-top: 200px;
+    width: 100%;
+    background-color: purple;
 }
 
 .burgerimage {
     width: 50%
+}
+
+.burgerslot {
+    display: flex;
+    border: 1px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: slategray;
+    height: 50px;
+    width: 40%;
+    margin: 10px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.burgerlist {
+    margin-bottom: 200px;
 }

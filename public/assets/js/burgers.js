@@ -40,30 +40,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
     }
   
-const addBurgerBtn = document.getElementById('create-form');
 
-if (addBurgerBtn) {
-  addBurgerBtn.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log(e)
-    console.log(document.getElementById('ca').value)
-    // Grabs the value of the textarea that goes by the name, "quote"
-    const newBurger = {
-      name: document.getElementById('ca').value.trim(),
+const createBurgerBtn = document.querySelector("#submit")
+
+createBurgerBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  console.log(event)
+  const newBurger = {
+    burger_name: document.querySelector('#ca').value.trim(),
     devoured: document.getElementById('devoured').checked,
-    };
-    console.log(newBurger)
-    // Send POST request to create a new quote
-    fetch('/api/burgers', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-
-      // make sure to serialize the JSON body
-      body: JSON.stringify(newBurger),
-    }).then(() => {
+  }
+  console.log(newBurger)
+  fetch('/api/burgers', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+       body: JSON.stringify(newBurger),
+           }).then(() => {
       // Empty the form
       console.log(newBurger)
       document.getElementById('ca').value = '';
@@ -73,7 +68,10 @@ if (addBurgerBtn) {
       location.reload();
     });
   });
-}
+
+
+
+    
 
 const deleteBurger = document.querySelectorAll('.delete-burger');
 

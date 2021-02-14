@@ -2,6 +2,7 @@
 <div class="image">
 <img class="burgerimage" src="Burger.jpg" alt="burger">
 </div>
+<div class="burgerlist">
 <div class="laterburger">
 <ul>
   {{#each burger}}
@@ -22,6 +23,7 @@
   {{/each}}
 </ul>
 </div>
+</div>
 
 <div class="burgerform">
 <h2>Add a Burger</h2>
@@ -39,6 +41,6 @@
     <input type="radio" name="devour" value="0" id="devour"> Devour Later
   </div>
 
-  <button class="submit" type="submit">Add Burger</button>
+  <button class="submit" id="submit" type="submit">Add Burger</button>
 </form>
 </div>
