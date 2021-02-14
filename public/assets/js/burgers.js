@@ -45,13 +45,14 @@ const addBurgerBtn = document.getElementById('create-form');
 if (addBurgerBtn) {
   addBurgerBtn.addEventListener('submit', (e) => {
     e.preventDefault();
-
+    console.log(e)
+    console.log(document.getElementById('ca').value)
     // Grabs the value of the textarea that goes by the name, "quote"
     const newBurger = {
       name: document.getElementById('ca').value.trim(),
     devoured: document.getElementById('devoured').checked,
     };
-
+    console.log(newBurger)
     // Send POST request to create a new quote
     fetch('/api/burgers', {
       method: 'POST',
@@ -64,6 +65,7 @@ if (addBurgerBtn) {
       body: JSON.stringify(newBurger),
     }).then(() => {
       // Empty the form
+      console.log(newBurger)
       document.getElementById('ca').value = '';
 
       // Reload the page so the user can see the new quote

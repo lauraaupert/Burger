@@ -2,7 +2,6 @@ const express = require('express')
 const burger = require('../models/burger.js')
 const router = express.Router();
 
-//create routes here
 
 router.get('/', (req, res) => {
     burger.selectAll((data) => {
@@ -32,7 +31,6 @@ router.get('/', (req, res) => {
       condition,
       (result) => {
         if (result.changedRows === 0) {
-          // If no rows were changed, then the ID must not exist, so 404
           return res.status(404).end();
         }
         res.status(200).end();
@@ -45,7 +43,6 @@ router.get('/', (req, res) => {
   
     burger.delete(condition, (result) => {
       if (result.affectedRows === 0) {
-        // If no rows were changed, then the ID must not exist, so 404
         return res.status(404).end();
       }
       res.status(200).end();

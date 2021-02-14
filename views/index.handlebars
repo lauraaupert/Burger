@@ -1,5 +1,6 @@
 <h1>Welcome to the Burger Devouring Factory</h1>
 
+<div class="laterburger">
 <ul>
   {{#each burger}}
   {{#unless devoured}}
@@ -8,7 +9,9 @@
   {{/each}}
 
 </ul>
+</div>
 
+<div class="devouredburger">
 <ul>
   {{#each burger}}
   {{#if devoured}}
@@ -16,31 +19,9 @@
   {{/if}}
   {{/each}}
 </ul>
+</div>
 
-
-{{!-- <ul>
-  {{#each burgers}}
-  {{!-- {{#unless sleepy}} --}}
-  {{!-- {{> burgers/burger-block devoured=false}}
-  {{!-- {{/unless}} --}}
-  {{!-- {{/each}}
-</ul>  --}}
-{{!-- <ul>
-  {{#each burgers}}
-  <li>
-	{{burger_name}}
-
-	{{!-- <button class="change-sleep" data-id="{{id}}" data-newsleep="{{sleep}}">
-		{{#if sleep}}SLEEP TIME!{{else}}WAKE UP!{{/if}}
-	</button>
-
-	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button> --}}
-</li>
-  {{!-- {{/each}} --}}
-{{!-- </ul>--}} 
-
-
-
+<div class="burgerform">
 <h2>Add a Burger</h2>
 <form id="create-form">
 
@@ -58,24 +39,4 @@
 
   <button class="submit" type="submit">Add Burger</button>
 </form>
-
-
-
-
-
-
-
-
-
-
-
-{{!-- Maybe for a partial to add button to each added burger? --}}
-{{!-- <li>
-	{{name}}
-
-	<button class="change-devour" data-id="{{id}}" data-newsleep="{{devour}}">
-		{{#if devour}}Devour Now!{{else}}WAKE UP!{{/if}}
-	</button>
-
-	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
-</li> --}}
+</div>

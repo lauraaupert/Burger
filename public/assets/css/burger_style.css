@@ -1,0 +1,15 @@
+.laterburger {
+    width: 50%;
+    background-color: yellow;
+    float: left;
+}
+ 
+.devouredburger {
+    background-color: blue;
+    width: 50%;
+    float: left;
+}
+
+.burgerform {
+    float: none;
+}
