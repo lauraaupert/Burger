@@ -39,7 +39,6 @@ const createBurgerBtn = document.querySelector("#submit")
 
 createBurgerBtn.addEventListener('click', (event) => {
   event.preventDefault();
-  console.log(event)
   const newBurger = {
     burger_name: document.querySelector('#ca').value.trim(),
     devoured: document.getElementById('devoured').checked,
@@ -52,7 +51,6 @@ createBurgerBtn.addEventListener('click', (event) => {
           },
        body: JSON.stringify(newBurger),
            }).then(() => {
-      console.log(newBurger)
       document.getElementById('ca').value = '';
 
       console.log('Created a new burger!');

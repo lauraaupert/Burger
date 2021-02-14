@@ -1,6 +1,6 @@
 const connection = require('./connection.js');
 
-const printQuestionMarks = (num) => {
+const questionMarks = (num) => {
   const arr = [];
 
   for (let i = 0; i < num; i++) {
@@ -34,7 +34,6 @@ const orm = {
           }
           cb(result);
         });
-
     },
     insertOne(table, cols, vals, cb) {
       let queryString = `INSERT INTO ${table}`;
@@ -43,7 +42,7 @@ const orm = {
       queryString += cols.toString();
       queryString += ') ';
       queryString += 'VALUES (';
-      queryString += printQuestionMarks(vals.length);
+      queryString += questionMarks(vals.length);
       queryString += ') ';
   
       console.log(queryString);
@@ -57,7 +56,6 @@ const orm = {
       });
     },
 
-    
     updateOne(table, objColVals, condition, cb) {
       let queryString = `UPDATE ${table}`;
   
@@ -75,6 +73,7 @@ const orm = {
         cb(result);
       });
     },
+
     delete(table, condition, cb) {
       let queryString = `DELETE FROM ${table}`;
       queryString += ' WHERE ';
