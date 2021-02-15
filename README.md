@@ -9,6 +9,8 @@ Technology use: Node.js, JavaScript, express.handlebars, MySQL, Heroku, JawsDB, 
 
 GitHub Repository: https://github.com/lauraaupert/Burger
 
+Deployed app: https://damp-scrubland-06022.herokuapp.com/
+
 ## TABLE OF CONTENTS
 
 [Requirements](#USER)   
